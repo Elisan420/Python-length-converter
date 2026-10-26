@@ -1,0 +1,12 @@
+while True:
+    c_input=input('Enter the length in centimetres or Enter "Q" to Exit the program  :').upper().strip()
+    if c_input == 'Q':
+        break
+    try:
+        c_reading=float(c_input)
+        if c_reading <=0:
+            raise ValueError ('The length should be greater than Zero')
+        inch_cal=c_reading / 2.54
+        print(f'{c_reading} Centimetres equals to {inch_cal:.4f} inches .')
+    except ValueError as e:
+        print(f'Invalid input {e}. please try again ')
